@@ -11,15 +11,28 @@ export default function Emojis() {
         ));
     }
 
+    const deleteEmo = (id) => {
+        setEmoji((e)=>e.filter((i)=>i.id !== id));
+    }
+
+    const updateEmo = () => {
+        setEmoji((emoji)=>(
+            emoji.map(e=> {
+                return {...e, emoji: '❤️'}
+            })
+        ))
+    }
+
     return (
         <>
             <div>
             <h3> Emojis </h3>
             {emoji.map((e)=>(
-                <span key = {e.id} style={{fontSize: '2rem'}}> {e.emoji} </span>
+                <span key = {e.id} style={{fontSize: '2rem'}} onClick={()=> deleteEmo(e.id)}> {e.emoji} </span>
             ))}
             </div>
             <button onClick = {addEmo}> Add New Emoji </button>
+            <button onClick = {updateEmo}> Make them all ❤️</button>
         </>
     );
 }
