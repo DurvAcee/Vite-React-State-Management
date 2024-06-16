@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <ScoreKeeper />
+      <ScoreKeeper numOfPlayers={10} target={5}/>
     </>
   )
 }
