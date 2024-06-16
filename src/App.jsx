@@ -1,14 +1,12 @@
-import { useState } from 'react'
 import './App.css'
 
-import Emojis from './components/Emojis'
+import ScoreKeeper from './components/ScoreKeeper'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <Emojis/>
+      <ScoreKeeper />
     </>
   )
 }
