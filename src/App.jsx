@@ -1,12 +1,14 @@
 import './App.css'
-
-import ScoreKeeper from './components/ScoreKeeper'
+import { Button } from '@mui/material'
 
 function App() {
 
   return (
     <>
-      <ScoreKeeper numOfPlayers={10} target={5}/>
+      <Button variant="text">Text</Button>
+      <Button variant="contained">Contained</Button>
+      <Button size = "small" color = "secondary" variant="contained">Contained</Button>
+      <Button variant="outlined">Outlined</Button>
     </>
   )
 }
